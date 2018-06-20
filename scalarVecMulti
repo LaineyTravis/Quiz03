@@ -7,22 +7,22 @@ def scalarVecMulti(scalar,vector):
     print("invalid input")
     #Since the function is multiplying a vector argument by a scalar argument, this will send message "invalid input" if the scalar argument is not a integer or if the vector argument is not a list.
   else:
-    b=[]
+    new = []
     for i in vector:
-      b.append(scalar*i)
-    return b
-  #if vector and scalar arguments do not apply to above if statement, then each component of the vector argument is mutiplied by the scalar argument and then appends it to the new vector "b".
+      new.append(scalar*i)
+    return new
+  #if vector and scalar arguments do not apply to above if statement, then each component of the vector argument is mutiplied by the scalar argument and then appends it to the "new" vector .
 
 
 #Test variables for this function
 
 testscalar01 = 3
-testscalar02 = [3,2,1]
+testscalar02 = [3, 2, 1]
 testscalar03 = "Squirrel Bubbles"
 
 testvector01 = [3, 7, 5]
-testvector02 = [3,1,1]
-testvector03 = [2,4,3]
+testvector02 = [3, 1, 1]
+testvector03 = [2, 4, 3]
 
 
 print(scalarVecMulti(testscalar01,testvector01))
