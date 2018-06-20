@@ -1,0 +1,19 @@
+def infNorm(vector):
+  """
+  This function will take in a vector agrument. Function will take the absolute value of each of the vector's components and will return the maximum of those absolute component values. 
+  """
+  if type(vector) != list:
+    print("invalid input")
+    return   
+    # if vector argument is not a list then the code will print the message "invalid input" and will return none. 
+  return max(abs(x) for x in vector)
+  #Takes each of the vector's components and will find its absolute values. the absolute values of each component will then be compared to one another and the function will return the maximum of those absolute values.
+
+
+testvector01 = [-13, 332, -339, 28, 0]
+testvector02 = -24
+testvector03 = "Squirrel Bubbles" 
+
+print(infNorm(testvector01))
+#print(infNorm(testvector02))
+#print(infNorm(testvector03))
