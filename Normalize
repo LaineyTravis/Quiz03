@@ -1,0 +1,27 @@
+def normalize(vector):
+  """
+  This function will take in a vector agrument. Function will divide each of the components by that max absolute value component before returning the updated vector. 
+  """
+  if type(vector) != list:
+    print("invalid input")
+    return   
+    #If vector argument is not a list then the code will print the message "invalid input" and will return none. 
+  else:
+    new_vector = []
+    #I wanted to combine the infNorm function from Problem 4 and the scalarVecMulti function from Problem 3 for this normalize function.
+    for i in vector:
+      new_vector.append(1 / (max(abs(x)for x in vector))*i)
+      #First the function takes each of the vector arguments components and finds the maximum absolute value of those components.
+      #Next it takes the inverse of that max absolute value and then multiplies it to each of components of the vector argument.
+  return new_vector
+  #Finally, the updated components are appended to new_vector to create the normalized vector with respect to the infinity norm.
+  
+
+
+testvector01 = [5, -30, 3, -10]
+testvector02 = -24
+testvector03 = "Squirrel Bubbles" 
+
+print(normalize(testvector01))
+#print(normalize(testvector02))
+#print(normalize(testvector03))
