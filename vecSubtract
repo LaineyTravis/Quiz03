@@ -1,19 +1,20 @@
 def vecSubtract(vector01, vector02):
   """
-  this function will take two vectors and subtract each corresponding component and then will return the difference vector.
+  This function will take two vectors and subtract each corresponding component and then will return the updated vector.
   """
   if len(vector01) != len(vector02):
     print("invalid input")
-    #Since the difference between two vectors can only occur between two vectors of the same length. The above lines of code will take in two vectors and if the vectors do not have the same length then the code stops and returns an error message.
+    #Since the difference between two vectors can only occur between two vectors of the same length. The above lines of code will take in two vectors and if the vectors do not have the same length then the code stops and returns "invalid input" message.
   for i in range(len(vector01)):
     answer = []
   for i in range(len(vector02)):
       answer.append(vector01[i]-vector02[i])
-      #this takes each corresponding component from vector01 and vector02 and takes the difference between the two before appending it to the new vector.
+      #This takes each corresponding component from vector01 and vector02 and takes the difference between the two before appending it to the "answer" vector.
   return answer
 
 
 #These are test variables for function
+
 testvector01A = [2, 4, 6]
 testvector01B = [1, 7, 8, 9]
 testvector01C = "Squirrel Bubbles"
@@ -22,10 +23,10 @@ testvector02A = [7, 2, 5]
 testvector02B = [2, 4, 33]
 testvector02C = [7, 12, 4]
 
-print (vecSubtract(testvector01A, testvector02A))
-#print (vecSubtract(testvector01B, testvector02B))
-#print (vecSubtract(testvector01C, testvector02C))
+print(vecSubtract(testvector01A, testvector02A))
+#print(vecSubtract(testvector01B, testvector02B))
+#print(vecSubtract(testvector01C, testvector02C))
 
 #testvector01B, testvector02B take two vectors of differing lengths and tries to find the difference. However because the vectors do not meet the requirements of the if statement in the code, we get an output of "invalid input"
 
-#testvector01C, testvector02C takes a vector and a string and tries to find the diffeence. However since this cannot mathematically happen, the code outputs of "invalid input"
+#testvector01C, testvector02C takes a vector and a string and tries to find the diffeence. However since this cannot mathematically happen, the code outputs the message of "invalid input"
