@@ -31,3 +31,4 @@ print (dot(testvector01C, testvector02C))
 
 #testvector01B, testvector02B runs two vectors of different lengths through the fucntion and returns the message "invalid input". Which is correct since the dot product between two vectors of differing lengths cannot be taken.
 #testvector01C,testvector02C runs a string and a vector and recieves the message "invalid input" since a string and a vector cannot compute a mathematical solution.
+ 
