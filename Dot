@@ -1,0 +1,29 @@
+def dot(vector01, vector02):
+  """
+  The function will take in two vectors and take the sum of each corresponding component's products, before returning the scalar answer.
+  """
+   if len(vector01) != len(vector02):
+      print("invalid input")
+#Since a dot product can only occur between two vectors of the same length. The above lines of code will take in two vectors and if the vectors do not have the same length then it will output an "invalid input" message. 
+   else:
+     return sum(vector01[i] * vector02[i] for i in range(len(vector01)))
+#This multiplies each corresponding component of both vector agruments together and then adds that product to the other corresponding products. i.e. vector01 i component will multiply to vector02 i component which will be added to the product of vector01 j * vector02 j which will be added to the product of vector01 k* vector02 k until all corresponding vector components have been multiplied and added together. 
+
+
+#Finally, the function will return a scalar as the answer.
+
+
+
+#These are test variables for function
+
+testvector01A = [2, 4, 6]
+testvector01B = [1, 7, 8, 9]
+testvector01C = "Squirrel Bubbles"
+
+testvector02A = [7, 2, 5]
+testvector02B = [2, 4, 33]
+testvector02C = [7, 12, 4]
+
+print (dot(testvector01A, testvector02A))
+#print (dot(testvector01B, testvector02B))
+#print (dot(testvector01C, testvector02C))
