@@ -4,7 +4,7 @@ def dot(vector01, vector02):
   and will return the scalar answer.
   """
    if len(vector01) != len(vector02):
-      return "ERROR"
+      return "invalid input"
 #Since a dot product can only occur between two vectors of the same length. The above lines of code will take in two vectors and if the vectors do not have the same length then it will output an "ERROR" message. 
    else:
      return sum(vector01[i] * vector02[i] for i in range(len(vector01)))
@@ -29,5 +29,5 @@ testvector02C = [7, 12, 4]
 print (dot(testvector01C, testvector02C))
 
 
-#testvector01B, testvector02B runs two vectors of different lengths through the fucntion and returns the message "Error". Which is correct since the dot product between two vectors of differing lengths cannot be taken.
-#testvector01C,testvector02C runs a string and a vector and recieves the message "ERROR" since a string and a vector cannot compute a mathematical solution.
+#testvector01B, testvector02B runs two vectors of different lengths through the fucntion and returns the message "invalid input". Which is correct since the dot product between two vectors of differing lengths cannot be taken.
+#testvector01C,testvector02C runs a string and a vector and recieves the message "invalid input" since a string and a vector cannot compute a mathematical solution.
