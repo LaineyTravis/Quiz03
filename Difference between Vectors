@@ -3,7 +3,7 @@ def vecSubtract(vector01, vector02):
   this function will take two vectors and subtract each corresponding component and then will return the difference vector.
   """
   if len(vector01) != len(vector02):
-    return "invalid input"
+    print("invalid input")
     #Since the difference between two vectors can only occur between two vectors of the same length. The above lines of code will take in two vectors and if the vectors do not have the same length then the code stops and returns an error message.
   for i in range(len(vector01)):
     answer = []
