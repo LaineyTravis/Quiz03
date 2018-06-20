@@ -1,6 +1,6 @@
 def scalarVecMulti(scalar,vector):
   """
-  This function will take a vectorand scalar as its arguments. 
+  This function will take a vector and scalar as its arguments. 
   The vector argument's components will each be multiplied by the scalar argument and will return the updated vector.
   """
   if type(scalar) != int or type(vector) != list:
@@ -10,8 +10,9 @@ def scalarVecMulti(scalar,vector):
     new = []
     for i in vector:
       new.append(scalar*i)
+      #Each vector argument component is multiplied by the scalar argument.
     return new
-  #if vector and scalar arguments do not apply to above if statement, then each component of the vector argument is mutiplied by the scalar argument and then appends it to the "new" vector .
+  #Then that updated component is appended to the "new" vector creating the updated vector.
 
 
 #Test variables for this function
@@ -21,7 +22,7 @@ testscalar02 = [3, 2, 1]
 testscalar03 = "Squirrel Bubbles"
 
 testvector01 = [3, 7, 5]
-testvector02 = [3, 1, 1]
+testvector02 = 6
 testvector03 = [2, 4, 3]
 
 
