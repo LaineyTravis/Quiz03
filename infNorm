@@ -6,8 +6,12 @@ def infNorm(vector):
     print("invalid input")  
     #If the vector argument is not a list then the code will print the message "invalid input" and will return none. 
   else:
-    return max(abs(x) for x in vector)
-  #Takes each of the vector's components and finds the absolute value. The absolute values of each component will then be compared to one another and the function will return the maximum of those absolute values.
+    norm = vector[0]
+    for element in vector:
+        if norm < abs(element):
+            norm = abs(element)
+    return norm
+  #Takes each of the vector's components and finds their absolute value. The absolute values of each component will then be compared to one another and the function will return the maximum of those absolute values.
 
 
 #Test variables for this function
