@@ -1,12 +1,13 @@
-def infNorm(vector):
-    norm = vector[0]
-    for i in vector:
-        if norm < abs(i):
-          norm = abs(i)
-    return norm
-    #I wanted to use the infinity norm code from the previous problem and then add on to it to create the normalized vector.
+#I wanted to use the infinity norm code from the previous problem and then add on to it to create the normalized vector.
 
-    
+def infNorm(vector):
+    max_value = vector[0]
+    for i in vector:
+        if max_value < abs(i):
+          max_value = abs(i)
+    return max_value
+
+
 def normalize(vector):
   """
   This function will take in a vector agrument, and will divide each of the argument's components by that maximum absolute value component before returning the updated vector. 
