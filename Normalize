@@ -1,3 +1,14 @@
+def infNorm(vector):
+    norm = vector[0]
+    for element in vector:
+        if norm < abs(element):
+            norm = abs(element)
+    return norm
+
+    #I wanted to use the infinity norm code from the previous problem and then add on to it to create the normalized vector.
+    
+    
+    
 def normalize(vector):
   """
   This function will take in a vector agrument, and will divide each of the argument's components by that maximum absolute value component before returning the updated vector. 
@@ -6,11 +17,12 @@ def normalize(vector):
     print("invalid input")  
     #If vector argument is not a list then the code will print the message "invalid input" and will return none. 
   else:
+#I also wanted to combine elements from the scalarVecMulti function from Problem 3 for this normalize function.
+    norm = infNorm(vector)
+     #First the function takes each of the vector argument's components and finds the maximum absolute value of those components using the above infNorm function.
     new_vector = []
-    #I wanted to combine the infNorm function from Problem 4 and the scalarVecMulti function from Problem 3 for this normalize function.
     for i in vector:
-      new_vector.append(1 / (max(abs(x)for x in vector))*i)
-      #First the function takes each of the vector argument's components and finds the maximum absolute value of those components.
+        new_vector.append((1.0/norm)*i)
       #Next it takes the inverse of that maximum absolute value and then multiplies it to each of components of the vector argument.
     return new_vector
   #Finally, the updated components are appended to new_vector to create the normalized vector with respect to the infinity norm.
